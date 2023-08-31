@@ -9,7 +9,35 @@ class Image(BaseModel):
 
 
 def process_video_data(data):
-    pass
+    frame_list = []
+
+    # Create a VideoCapture object to read the MJPEG video data
+    cap = cv2.VideoCapture()
+    cap.open(cv2.CAP_MJPEG)
+    cap.set(1, 0)  # Set the frame position to the beginning
+
+    # Read the MJPEG video data as frames
+    while True:
+        success, frame = cap.read()
+        if not success:
+            break
+
+        # Resize the frame to your desired dimensions
+        frame = cv2.resize(frame, (224, 224))  # Replace with your desired size
+
+        # Preprocess the frame (e.g., normalize pixel values)
+        frame = frame / 255.0  # Normalize pixel values to the range [0, 1]
+
+        # Add the preprocessed frame to the list
+        frame_list.append(frame)
+
+    # Close the VideoCapture object
+    cap.release()
+
+    # Convert the list of frames to a NumPy array
+    frames = np.array(frame_list)
+
+    return frames
 
 
 @app.post("/image")
