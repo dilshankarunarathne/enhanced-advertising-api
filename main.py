@@ -51,6 +51,7 @@ async def evaluate_image(image: Image):
     return {"age": age, "gender": gender}
 
 
+# For video streams
 @app.websocket("/video")
 async def video(websocket: WebSocket):
     await websocket.accept()
