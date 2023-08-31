@@ -26,6 +26,7 @@ provides the following functionalities:
 
 - Python 3.8 or higher
 - pip 20.0 or higher
+- Docker 19.03 or higher
 
 ## Contributing
 
