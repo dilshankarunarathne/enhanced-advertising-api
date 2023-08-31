@@ -57,6 +57,9 @@ async def video(websocket: WebSocket):
         # Process the data to extract frames and preprocess them
         frames = process_video_data(data)
 
-        # TODO: Process video data
+        # TODO: Send the frames to the model for evaluation
+
+        # TODO: For testing, visualize the frames
+        for frame in frames:
 
         return {"age": 23, "gender": 'M'}  # TODO: Replace with actual data
