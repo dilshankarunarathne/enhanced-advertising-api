@@ -28,4 +28,5 @@ async def video(websocket: WebSocket):
         frames = process_video_data(data)
 
         # TODO: Process video data
+
         return {"age": 23, "gender": 'M'}  # TODO: Replace with actual data
