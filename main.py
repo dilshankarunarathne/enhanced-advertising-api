@@ -61,5 +61,7 @@ async def video(websocket: WebSocket):
 
         # TODO: For testing, visualize the frames
         for frame in frames:
+            cv2.imshow('frame', frame)
+            cv2.waitKey(1)
 
         return {"age": 23, "gender": 'M'}  # TODO: Replace with actual data
