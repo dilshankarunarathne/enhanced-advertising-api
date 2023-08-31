@@ -6,6 +6,7 @@ The API gateway for Enhanced Advertising system.
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 
+
 ## License
 
 This work is licensed under a
