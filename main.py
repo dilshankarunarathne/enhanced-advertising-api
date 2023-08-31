@@ -65,3 +65,15 @@ async def video(websocket: WebSocket):
             cv2.waitKey(1)
 
         return {"age": 23, "gender": 'M'}  # TODO: Replace with actual data
+
+
+@app.post("/upload/")
+async def upload_video(file: UploadFile):
+    if file.content_type != "video/mp4":
+        return JSONResponse(content={"message": "Invalid file format"}, status_code=400)
+
+    video_data = await file.read()
+
+    # Process the video_data as needed, e.g., save it to a file or perform analysis
+
+    return JSONResponse(content={"message": "Video uploaded successfully"})
