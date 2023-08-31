@@ -1,11 +1,17 @@
-# Test your FastAPI endpoints
+### Test with a valid image
 
-GET http://127.0.0.1:8000/
-Accept: application/json
+POST http://localhost:8000/evaluate_image
+Content-Type: application/json
 
-###
+{
+  "image": "valid_image_data"
+}
 
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
+### Test with an invalid image
 
-###
+POST http://localhost:8000/evaluate_image
+Content-Type: application/json
+
+{
+  "image": "invalid_image_data"
+}
