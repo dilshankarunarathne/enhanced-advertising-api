@@ -25,7 +25,7 @@ def process_video_data(data):
             break
 
         # Resize the frame to your desired dimensions
-        frame = cv2.resize(frame, (224, 224))  # Replace with your desired size
+        frame = cv2.resize(frame, (480, 360))  # Replace with your desired size
 
         # Preprocess the frame (e.g., normalize pixel values)
         frame = frame / 255.0  # Normalize pixel values to the range [0, 1]
