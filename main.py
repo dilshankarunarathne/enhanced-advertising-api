@@ -1,4 +1,4 @@
-from fastapi import FastAPI, WebSocket
+from fastapi import FastAPI, WebSocket, File, UploadFile
 from pydantic import BaseModel
 import cv2
 import numpy as np
