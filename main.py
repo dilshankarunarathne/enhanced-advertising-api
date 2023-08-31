@@ -19,5 +19,9 @@ async def video(websocket: WebSocket):
     await websocket.accept()
     while True:
         data = await websocket.receive_bytes()
+
+        # Process the data to extract frames and preprocess them
+        frames = process_video_data(data)
+
         # TODO: Process video data
         return {"age": 23, "gender": 'M'}  # TODO: Replace with actual data
