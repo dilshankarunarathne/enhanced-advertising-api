@@ -8,5 +8,5 @@ class Image(BaseModel):
 
 @app.post("/evaluate_image")
 async def evaluate_image(image: Image):
-    age, gender = evaluate(image.image)
+    age, gender = (23, 'M')
     return {"age": age, "gender": gender}
