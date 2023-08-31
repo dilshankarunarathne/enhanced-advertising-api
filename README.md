@@ -19,10 +19,8 @@ The API gateway for Enhanced Advertising system. Build with Python and FastAPI.
 This is the API gateway for Enhanced Advertising system. This API is built with Python and FastAPI. This API 
 provides the following functionalities:
 
-- **Ad Topic Recommendation**: This API provides the functionality to recommend the most relevant ad topic for a given
-  user. This API is built using a machine learning model trained with the [Ad Topic Recommender](
-- **Ad Topic Recommendation**: This API provides the functionality to recommend the most relevant ad topic for a given
-  user. This API is built using a machine learning model trained with the [Ad Topic Recommender](
+
+## Installation
 
 ## Contributing
 
