@@ -7,14 +7,12 @@ The API gateway for Enhanced Advertising system. Build with Python and FastAPI.
 
 ## Table of Contents
 
-- [Enhanced Advertising API](#enhanced-advertising-api)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact Information](#contact-information)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact Information](#contact-information)
 
 ## Contributing
 
