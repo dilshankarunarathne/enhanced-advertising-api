@@ -71,7 +71,7 @@ async def video(websocket: WebSocket):
         return {"age": 23, "gender": 'M'}  # TODO: Replace with actual data
 
 
-# For video uploads
+# For video file uploads
 @app.post("/upload/")
 async def upload_video(file: UploadFile):
     if file.content_type != "video/mp4":
