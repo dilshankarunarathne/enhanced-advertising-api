@@ -8,6 +8,10 @@ class Image(BaseModel):
     image: str
 
 
+def process_video_data(data):
+    pass
+
+
 @app.post("/image")
 async def evaluate_image(image: Image):
     age, gender = (23, 'M')  # TODO: Replace with actual model
