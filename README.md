@@ -14,6 +14,8 @@ The API gateway for Enhanced Advertising system. Build with Python and FastAPI.
 - [License](#license)
 - [Contact Information](#contact-information)
 
+
+
 ## Contributing
 
 If you'd like to contribute to this project, please check the contribution guidelines for more information.
