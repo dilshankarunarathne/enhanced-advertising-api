@@ -18,3 +18,4 @@ async def video(websocket: WebSocket):
     while True:
         data = await websocket.receive_bytes()
         # TODO: Process video data
+        return {"age": 23, "gender": 'M'} # TODO: Replace with actual data
