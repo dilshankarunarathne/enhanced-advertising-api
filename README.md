@@ -24,6 +24,8 @@ provides the following functionalities:
 
 ### Prerequisites
 
+- Python 3.8 or higher
+
 ## Contributing
 
 If you'd like to contribute to this project, please check the contribution guidelines for more information.
