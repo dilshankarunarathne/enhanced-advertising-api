@@ -1,5 +1,7 @@
 from fastapi import FastAPI, WebSocket
 from pydantic import BaseModel
+import cv2
+import numpy as np
 
 app = FastAPI()
 
