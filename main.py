@@ -1,9 +1,8 @@
-from fastapi import FastAPI, WebSocket, File, UploadFile
-from starlette.responses import JSONResponse
-from pydantic import BaseModel
 import cv2
 import numpy as np
-import io
+from fastapi import FastAPI, WebSocket, UploadFile
+from pydantic import BaseModel
+from starlette.responses import JSONResponse
 
 app = FastAPI()
 
