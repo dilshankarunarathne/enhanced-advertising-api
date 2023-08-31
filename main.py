@@ -10,3 +10,5 @@ class Image(BaseModel):
 async def evaluate_image(image: Image):
     age, gender = (23, 'M') # TODO: Replace with actual model
     return {"age": age, "gender": gender}
+
+
