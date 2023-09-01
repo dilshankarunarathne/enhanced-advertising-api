@@ -71,7 +71,7 @@ async def get_current_user(token: Annotated[str, oauth2_scheme]):
     return user
 
 
-# this method is used by the users to aquire a token (login).
+# this method is used by the users to acquire a token (login).
 @app.post("/token")
 async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     user_dict = fake_users_db.get(form_data.username)
