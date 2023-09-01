@@ -22,6 +22,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
 # this method is used to get a user from the db
+# method should be able to get a user from the db based on the username
 def get_user(db, username: str):
     if username in db:
         user_dict = db[username]
