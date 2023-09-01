@@ -27,6 +27,7 @@ def get_user(db, username: str):
         return UserInDB(**user_dict)
 
 
+# this method is used to verify the token. 
 def fake_decode_token(token):
     user = get_user(fake_users_db, token)
     return user
