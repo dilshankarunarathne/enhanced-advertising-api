@@ -1,7 +1,7 @@
 from typing import Annotated
 
 from fastapi import HTTPException, status
-from fastapi.security import OAuth2PasswordBearer
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 from app.data_access.model.user_model import UserInDB
 
@@ -67,4 +67,3 @@ async def get_current_user(token: Annotated[str, oauth2_scheme]):
 
 @app.post("/token")
 async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
-    
