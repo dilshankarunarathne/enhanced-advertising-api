@@ -9,4 +9,4 @@ class User(BaseModel):
 
 
 class UserInDB(User):
-    hashed_password: str | None = None
+    hashed_password: str
