@@ -46,7 +46,7 @@ def process_video_data(data):
 # For captured images
 @app.post("/image")
 async def evaluate_image(image: Image):
-
+    print()
     # TODO: Replace with actual code
 
     # Save the image to a file
