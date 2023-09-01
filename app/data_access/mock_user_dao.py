@@ -17,7 +17,7 @@ fake_users_db = {
     },
 }
 
-# replace "token" with /token endpoint, this is where a client should obtain a token from
+# replace "token" with '/token' endpoint, this is where a client should obtain a token from
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
@@ -35,7 +35,7 @@ def get_user(db, username: str):
 # method should be able to evaluate a token sent by a client and check in the db to see if
 # an actual user exists with the username that is encoded in the token. If the user exists,
 # the method should return the user, otherwise it should return None.
-# here, we are mocking the token with just by the username 
+# here, we are mocking the token with just by the username
 def fake_decode_token(token):
     user = get_user(fake_users_db, token)
     return user
