@@ -28,7 +28,7 @@ def get_user(db, username: str):
 
 
 # this method is used to verify the token.
-# method should be able to 
+# method should be able to evaluate a token sent by a user 
 def fake_decode_token(token):
     user = get_user(fake_users_db, token)
     return user
