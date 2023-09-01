@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from fastapi import FastAPI, WebSocket, UploadFile
+from fastapi import FastAPI, WebSocket, UploadFile, File
 from pydantic import BaseModel
 from starlette.responses import JSONResponse
 
@@ -45,15 +45,15 @@ def process_video_data(data):
 
 # For captured images
 @app.post("/image")
-async def evaluate_image(image: Image):
-    print("image endopoint invoked...")
-    # TODO: Replace with actual code
+async def evaluate_image(image: UploadFile = File(...)):
+    # Read the contents of the uploaded file
+    contents = await image.read()
 
     # Save the image to a file
-    with open("D:\image.jpg", "wb") as f:
-        f.write(image.image)
+    with open("D:/image.jpg", "wb") as f:
+        f.write(contents)
 
-    return "Image recieved"
+    return "Image received"
 
 
 # For video streams
