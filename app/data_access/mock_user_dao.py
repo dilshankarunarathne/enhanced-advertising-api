@@ -101,7 +101,7 @@ async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
     if current_user.is_adviser:
         return {"message": "Hello Adviser"}
     else:
-        return HTTPException(
+        raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid authentication credentials",
             headers={"WWW-Authenticate": "Bearer"},
