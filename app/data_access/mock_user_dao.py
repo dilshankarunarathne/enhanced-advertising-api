@@ -100,3 +100,4 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
 async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
     if current_user.is_adviser:
         return {"message": "Hello Adviser"}
+    else:
