@@ -2,8 +2,8 @@ from pydantic import BaseModel
 
 
 """
-class Image(BaseModel):
-    image: str
+This module defines the data models used by the API.
+
 """
 class User(BaseModel):
     id: int
