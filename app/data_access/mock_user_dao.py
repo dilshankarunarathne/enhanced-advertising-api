@@ -4,7 +4,6 @@ from fastapi import HTTPException, status, Depends, APIRouter
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 from app.data_access.model.user_model import UserInDB
-from app.main import app
 
 fake_users_db = {
     "johndoe": {
