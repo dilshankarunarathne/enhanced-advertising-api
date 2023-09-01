@@ -3,7 +3,7 @@ from typing import Annotated
 from fastapi import HTTPException, status, Depends, APIRouter
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
-from app.data_access.model.user_model import UserInDB
+from app.data_access.model.user_model import UserInDB, User
 
 fake_users_db = {
     "johndoe": {
@@ -97,5 +97,5 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
 
 
 @router.get("/")
-async def auth_root(current_user: Annotated[User, Depends(get_current_user)):
+async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
     return {"message": "Hello World"}
