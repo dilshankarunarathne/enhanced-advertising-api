@@ -46,8 +46,11 @@ def process_video_data(data):
 # For captured images
 @app.post("/image")
 async def evaluate_image(image: Image):
-    age, gender = (23, 'M')  # TODO: Replace with actual model
-    return {"age": age, "gender": gender}
+
+    # TODO: Replace with actual code
+
+    
+    return "Image recieved"
 
 
 # For video streams
