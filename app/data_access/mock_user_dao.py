@@ -7,6 +7,7 @@ from app.data_access.model.user_model import UserInDB
 
 fake_users_db = {
     "johndoe": {
+        "id": 1;
         "username": "johndoe",
         "email": "johndoe@example.com",
         "hashed_password": "fake-hashed-secret",
