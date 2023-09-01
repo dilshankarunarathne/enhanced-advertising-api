@@ -2,4 +2,4 @@ def decode_token(token):
     pass
 
 
-def
+def hash_password
