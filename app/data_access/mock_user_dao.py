@@ -21,6 +21,7 @@ fake_users_db = {
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
+# this method is used to get a user from the db
 def get_user(db, username: str):
     if username in db:
         user_dict = db[username]
