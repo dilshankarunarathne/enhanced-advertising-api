@@ -21,6 +21,7 @@ fake_users_db = {
 # this is the endpoint that the client will send the username and password to, and if they are valid,
 # the client will receive a token in return.
 # this token will be used to authenticate the client in future requests.
+# the client will send the token in the Authorization header of the request.
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
