@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from data_access import mock_user_dao
+from .data_access import mock_user_dao
 
 app = FastAPI()
 
