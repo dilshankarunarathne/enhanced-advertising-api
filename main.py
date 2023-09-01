@@ -79,6 +79,7 @@ async def video(websocket: WebSocket):
 # For video file uploads
 @app.post("/upload/")
 async def upload_video(file: UploadFile):
+    print("Upload endpoint invoked...")
     if file.content_type != "video/mp4":
         return JSONResponse(content={"message": "Invalid file format"}, status_code=400)
 
