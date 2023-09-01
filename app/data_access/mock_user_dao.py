@@ -69,4 +69,4 @@ async def get_current_user(token: Annotated[str, oauth2_scheme]):
 async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     user_dict = fake_users_db.get(form_data.username)
     if not user_dict:
-        
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
