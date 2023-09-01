@@ -50,6 +50,7 @@ def fake_decode_token(token):
 
 
 # this method is used to get the current user.
+# method should be able to get the current user based on the token that is passed in.
 async def get_current_user(token: Annotated[str, oauth2_scheme]):
     user = fake_decode_token(token)
     if not user:
