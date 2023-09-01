@@ -17,8 +17,8 @@ fake_users_db = {
     },
 }
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 # replace "token" with /token endpoint, this is where a client should obtain a token from
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
 def get_user(db, username: str):
