@@ -46,4 +46,4 @@ def fake_decode_token(token):
     return user
 
 
-async def get_current_user(token: ):
+async def get_current_user(token: Annotated[str, ]):
