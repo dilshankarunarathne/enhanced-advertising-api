@@ -74,6 +74,7 @@ async def get_current_user(token: Annotated[str, oauth2_scheme]):
 # this method is used by the users to acquire a token (login).
 # method should be able to get the username and password from the request body and check in the db to see if
 # an actual user exists with the username and password that are passed in. If the user exists,
+# the method should return the user, otherwise it should raise an exception.
 @app.post("/token")
 async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     user_dict = fake_users_db.get(form_data.username)
