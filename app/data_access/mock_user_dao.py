@@ -21,8 +21,10 @@ fake_users_db = {
     },
 }
 
+
 def fake_hash_password(password: str):
-    return "fake-hashed-" + password 
+    return "fake-hashed-" + password
+
 
 # replace "token" with '/token' endpoint, this is where a client should obtain a token from.
 # this is the endpoint that the client will send the username and password to, and if they are valid,
