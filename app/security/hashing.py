@@ -1,5 +1,5 @@
 def decode_token(token):
-    pass
+    pass # TODO: implement this method
 
 
 def hash_password(password: str):
