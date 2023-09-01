@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from fastapi import HTTPException
+from fastapi import HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 
 from app.data_access.model.user_model import UserInDB
