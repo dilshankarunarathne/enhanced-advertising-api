@@ -28,6 +28,7 @@ def fake_hash_password(password: str):
 router = APIRouter(
     prefix="/auth",
     tags=["auth"],
+    responses={404: {"description": "Not found"}},
 )
 
 # replace "token" with '/token' endpoint, this is where a client should obtain a token from.
