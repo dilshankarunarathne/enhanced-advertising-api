@@ -28,8 +28,8 @@ def fake_hash_password(password: str):
 
 
 router = APIRouter(
-    prefix="/auth",
-    tags=["auth"],
+    prefix="/mockAuth",
+    tags=["mockAuth"],
     responses={404: {"description": "Not found"}},
 )
 
