@@ -9,7 +9,7 @@ fake_users_db = {
     "johndoe": {
         "username": "johndoe",
         "email": "johndoe@example.com",
-        "hashed_password": "fakehashedsecret",
+        "hashed_password": "fake-hashed-secret",
         "is_adviser": False,
     },
     "alice": {
