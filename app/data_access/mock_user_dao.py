@@ -1,3 +1,5 @@
+from typing import Annotated
+
 from fastapi.security import OAuth2PasswordBearer
 
 from app.data_access.model.user_model import UserInDB
