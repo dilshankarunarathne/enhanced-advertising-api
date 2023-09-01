@@ -5,23 +5,6 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 from app.data_access.model.user_model import UserInDB
 
-fake_users_db = {
-    "johndoe": {
-        "id": 1,
-        "username": "johndoe",
-        "email": "johndoe@example.com",
-        "hashed_password": "fake-hashed-secret",
-        "is_adviser": False,
-    },
-    "alice": {
-        "id": 2,
-        "username": "alice",
-        "email": "alice@example.com",
-        "hashed_password": "fake-hashed-secret-2",
-        "is_adviser": True,
-    },
-}
-
 
 def fake_hash_password(password: str):
     return "fake-hashed-" + password
