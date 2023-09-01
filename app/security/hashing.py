@@ -1,1 +1,1 @@
-def decode_token
+def decode_token(token):
