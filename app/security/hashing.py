@@ -3,4 +3,4 @@ def decode_token(token):
 
 
 def hash_password(password: str):
-    
+    pass
