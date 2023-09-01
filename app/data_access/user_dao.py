@@ -1,5 +1,5 @@
 router = APIRouter(
-    prefix="/mockAuth",
+    prefix="/auth",
     tags=["mockAuth"],
     responses={404: {"description": "Not found"}},
 )
