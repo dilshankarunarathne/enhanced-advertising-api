@@ -6,3 +6,6 @@ class User(BaseModel):
     username: str | None = None
     email: str | None = None
     is_adviser: bool | None = None
+
+
+class UserInDB(User):
