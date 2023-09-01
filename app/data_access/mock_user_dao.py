@@ -65,3 +65,4 @@ async def get_current_user(token: Annotated[str, oauth2_scheme]):
     return user
 
 
+@app.post("/token")
