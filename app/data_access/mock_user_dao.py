@@ -51,6 +51,7 @@ def fake_decode_token(token):
 
 # this method is used to get the current user.
 # method should be able to get the current user based on the token that is passed in.
+# if the token is valid, the method should return the user, otherwise it should raise an exception.
 async def get_current_user(token: Annotated[str, oauth2_scheme]):
     user = fake_decode_token(token)
     if not user:
