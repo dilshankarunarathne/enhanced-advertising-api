@@ -5,3 +5,4 @@ class User(BaseModel):
     id: int
     username: str | None = None
     email: str | None = None
+    disabled: bool | None = None
