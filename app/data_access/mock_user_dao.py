@@ -72,7 +72,7 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     if not user_dict:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
     user = UserInDB(**user_dict)
-    hashed_password = mock_hash_password(form_data.password)
+    hashed_password = fake_hash_password(form_data.password)
     if not hashed_password == user.hashed_password:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
 
