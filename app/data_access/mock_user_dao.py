@@ -3,7 +3,6 @@ from fastapi.security import OAuth2PasswordBearer
 fake_users_db = {
     "johndoe": {
         "username": "johndoe",
-        "full_name": "John Doe",
         "email": "johndoe@example.com",
         "hashed_password": "fakehashedsecret",
         "is_adviser": False,
