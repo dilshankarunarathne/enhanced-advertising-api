@@ -1,5 +1,7 @@
 from fastapi.security import OAuth2PasswordBearer
 
+from app.data_access.model.user_model import UserInDB
+
 fake_users_db = {
     "johndoe": {
         "username": "johndoe",
