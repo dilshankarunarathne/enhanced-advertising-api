@@ -1,10 +1,6 @@
 from pydantic import BaseModel
 
 
-"""
-This module defines the data models used by the API.
-
-"""
 class User(BaseModel):
     id: int
     username: str | None = None
