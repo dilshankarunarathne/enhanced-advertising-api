@@ -17,7 +17,7 @@ fake_users_db = {
     },
 }
 
-# replace "token" with '/token' endpoint, this is where a client should obtain a token from
+# replace "token" with '/token' endpoint, this is where a client should obtain a token from.
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
