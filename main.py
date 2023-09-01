@@ -50,8 +50,9 @@ async def evaluate_image(image: Image):
     # TODO: Replace with actual code
 
     # Save the image to a file
-    with open("image.jpg", "wb") as f:
+    with open("D:\image.jpg", "wb") as f:
         f.write(image.image)
+
     return "Image recieved"
 
 
