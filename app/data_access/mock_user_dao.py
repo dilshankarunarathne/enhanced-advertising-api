@@ -63,3 +63,4 @@ async def get_current_user(token: Annotated[str, oauth2_scheme]):
 async def get_current_active_user(
         current_user: Annotated[UserInDB, oauth2_scheme]
 ):
+    
