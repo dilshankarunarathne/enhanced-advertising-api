@@ -16,3 +16,5 @@ fake_users_db = {
         "disabled": True,
     },
 }
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
