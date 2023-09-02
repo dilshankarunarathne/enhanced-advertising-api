@@ -21,6 +21,4 @@ def get_next_avail_id() -> int:
 
 
 def get_user(db, username: str):
-    if user_exists(username):
-        user_dict = 
-        return UserInDB(**user_dict)
+    
