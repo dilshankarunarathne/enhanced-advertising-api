@@ -1,2 +1,2 @@
 class Blacklist:
-    id
+    id: int
