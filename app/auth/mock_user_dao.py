@@ -8,6 +8,7 @@ from passlib.context import CryptContext
 
 from app.auth.models.token_model import TokenData
 from app.auth.models.user_model import UserInDB, User
+from app.auth.user_dao import get_user
 from app.security.hashing import verify_password, get_password_hash, create_access_token, is_token_blacklisted
 
 # to get a string like this run:
