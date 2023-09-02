@@ -196,5 +196,6 @@ async def register_user(
         username: str = Form(...),
         email: str = Form(...),
         password: str = Form(...),
+        is_adviser: bool = Form(...),
 ):
 
