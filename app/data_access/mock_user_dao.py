@@ -191,7 +191,7 @@ class RegistrationForm(BaseModel):
 
 @router.post("/register")
 async def register_user(
-        form_data: 
+        form_data: RegistrationForm = Depends(RegistrationForm.as_form)
 ):
     print("--------", form_data.email, form_data.username, form_data.password, form_data.is_adviser)
     if form_data.username in fake_users_db:
