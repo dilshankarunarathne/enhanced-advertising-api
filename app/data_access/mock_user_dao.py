@@ -75,6 +75,7 @@ def get_user(db, username: str):
 
 # this method is used to authenticate a user.
 # method should be able to get the username and password from the request body and check in the db to see if
+
 def authenticate_user(fake_db, username: str, password: str):
     user = get_user(fake_db, username)
     if not user:
