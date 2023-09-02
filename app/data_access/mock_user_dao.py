@@ -73,6 +73,9 @@ def get_user(db, username: str):
         return UserInDB(**user_dict)
 
 
+
+
+
 # this method is used to verify the token.
 # method should be able to evaluate a token sent by a client and check in the db to see if
 # an actual user exists with the username that is encoded in the token. If the user exists,
