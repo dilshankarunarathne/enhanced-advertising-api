@@ -30,4 +30,5 @@ def create_access_token(data: dict, expires_delta: int = None):
 
 
 def is_token_blacklisted(token):
-    
+    # TODO: implement this method
+    pass
