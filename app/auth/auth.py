@@ -3,6 +3,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Form, HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from jose import jwt
 
 from app.auth.models.user_model import UserInDB
 from app.auth.user_dao import user_exists, get_next_avail_id, add_new_user, get_user
