@@ -188,6 +188,8 @@ class RegistrationForm(BaseModel):
     password: str
     is_adviser: bool
 
+    
+
 
 @router.post("/register")
 async def register_user(
