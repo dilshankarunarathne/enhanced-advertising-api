@@ -20,6 +20,7 @@ def get_next_avail_id() -> int:
     pass
 
 
+# 
 def get_user(db, username: str):
     # TODO: implement this method
     pass
