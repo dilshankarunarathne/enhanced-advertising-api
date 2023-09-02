@@ -6,8 +6,7 @@ user_dao.connect()
 
 
 def add_new_user(user: User):
-    # TODO: implement this method
-    pass
+    
 
 
 def user_exists(username: str) -> bool:
