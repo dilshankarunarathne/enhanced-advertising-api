@@ -92,6 +92,7 @@ def authenticate_user(fake_db, username: str, password: str):
 # method should be able to get the username and password from the request body and check in the db to see if
 # an actual user exists with the username and password that are passed in. If the user exists, the method should
 # create a token for the user and return the token, otherwise it should return None. The token should be a random
+
 def create_access_token(data: dict, expires_delta: int = None):
     to_encode = data.copy()
     if expires_delta:
