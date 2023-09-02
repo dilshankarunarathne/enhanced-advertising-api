@@ -32,7 +32,7 @@ fake_users_db = {
 }
 
 
-class Token(BaseBodel):
+class Token(BaseModel):
     access_token: str
     token_type: str
 
