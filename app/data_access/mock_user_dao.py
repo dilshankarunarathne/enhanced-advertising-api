@@ -77,7 +77,7 @@ def authenticate_user(fake_db, username: str, password: str):
     user = get_user(fake_db, username)
     if not user:
         return False
-    
+    if not verify_password
 
 
 # this method is used to verify the token.
