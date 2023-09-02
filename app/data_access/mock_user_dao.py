@@ -36,6 +36,8 @@ fake_users_db = {
 }
 
 
+
+
 def fake_hash_password(password: str):
     return "fake-hashed-" + password
 
