@@ -128,7 +128,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
         detail="Could not validate credentials",
         headers={"WWW-Authenticate": "Bearer"},
     )
-    if is_token_blacklisted(token):
+    if is_token_blacklisted(token): # updated for logout mechanism
         raise credentials_exception
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
