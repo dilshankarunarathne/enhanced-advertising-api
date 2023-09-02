@@ -30,6 +30,4 @@ def create_access_token(data: dict, expires_delta: int = None):
 
 
 def is_token_blacklisted(token):
-    blacklisted_on = datetime.utcnow()
-
-    # TODO: Add token to blacklist
+    
