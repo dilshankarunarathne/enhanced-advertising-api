@@ -5,8 +5,6 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 from app.data_access.model.user_model import UserInDB, User
 
-
-
 # to get a string like this run:
 # openssl rand -hex 32
 # this is the secret key that will be used to sign the JWT token
