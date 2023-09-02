@@ -188,7 +188,13 @@ class RegistrationForm(BaseModel):
     password: str
     is_adviser: bool
 
-    
+    def as_form(self) -> dict:
+        return {
+            "username": self.username,
+            "email": self.email,
+            "password": self.password,
+            "is_adviser": self.is_adviser,
+        }
 
 
 @router.post("/register")
