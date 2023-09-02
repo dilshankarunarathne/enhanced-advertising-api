@@ -184,7 +184,7 @@ async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
 #############################################################################################
 
 # this method is used by the users to register.
-
+# method should be able to get the username and password from the request body and check in the db to see if
 @router.post("/register")
 async def register_user(
         username: str = Form(...),
