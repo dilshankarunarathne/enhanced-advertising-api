@@ -6,6 +6,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
 from passlib.context import CryptContext
 from pydantic import BaseModel
+from pydantic.dataclasses import dataclass
 
 from app.data_access.model.token_dao import TokenData
 from app.data_access.model.user_model import UserInDB, User
@@ -182,6 +183,7 @@ async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
 
 #############################################################################################
 
+@dataclass
 class RegistrationForm(BaseModel):
     username: str
     email: str
