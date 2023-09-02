@@ -24,8 +24,7 @@ def get_next_avail_id() -> int:
 
 
 def get_user(username: str):
-    get_user_by_username(username)
-    pass
+    return get_user_by_username(username)
 
 
 class UserDAO:
