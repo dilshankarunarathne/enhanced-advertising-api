@@ -7,7 +7,7 @@ from app.auth.models.user_model import User, UserInDB
     middleware for accessing the database and performing CRUD operations on the user table
 """
 
-UserDAO()
+userDAO = UserDAO()
 
 
 def add_new_user(user: User):
