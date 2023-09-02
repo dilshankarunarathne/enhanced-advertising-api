@@ -121,7 +121,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
         headers={"WWW-Authenticate": "Bearer"},
     )
     try:
-        payload = jwt.decode()
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
 
 
 # tested - working...! :)
