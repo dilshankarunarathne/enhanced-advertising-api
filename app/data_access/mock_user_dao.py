@@ -91,7 +91,7 @@ def create_access_token(data: dict, expires_delta: int = None):
     to_encode = data.copy()
     if expires_delta:
         expire = datetime.utcnow() + timedelta(minutes=expires_delta)
-    
+    else:
 
 
 # this method is used to verify the token.
