@@ -1,5 +1,7 @@
 from app.auth.models.user_model import User
-
+"""
+    middleware for accessing the database and performing CRUD operations on the user table
+"""
 
 def add_new_user(user: User):
     # TODO: implement this method
