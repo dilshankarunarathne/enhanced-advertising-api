@@ -4,7 +4,7 @@
 
 
 def add_new_user(user: User):
-    # TODO:
+    # TODO: implement
 
 
 def user_exists(username: str) -> bool:
