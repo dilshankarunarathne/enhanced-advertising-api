@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
+
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 
