@@ -190,7 +190,7 @@ class RegistrationForm():
 
 @router.post("/register")
 async def register_user(
-        form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
+        form_data: Annotated[RegistrationForm, Depends()]
 ):
     if form_data.username in fake_users_db:
         raise HTTPException(
