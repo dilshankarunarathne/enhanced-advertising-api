@@ -58,6 +58,7 @@ def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
 def get_password_hash(password):
+    return pwd_context.hash(password)
 
 
 # this method is used to get a user from the db
