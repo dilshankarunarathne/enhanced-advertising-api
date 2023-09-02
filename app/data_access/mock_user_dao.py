@@ -195,19 +195,20 @@ class RegistrationForm(BaseModel):
 async def register_user(
         form_data: RegistrationForm = Depends()
 ):
-    print("--------", form_data.email, form_data.username, form_data.password, form_data.is_adviser)
-    if form_data.username in fake_users_db:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Username already exists",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    else:
-        fake_users_db[form_data.username] = {
-            "id": len(fake_users_db) + 1,
-            "username": form_data.username,
-            "email": form_data.email,
-            "hashed_password": get_password_hash(form_data.password),
-            "is_adviser": form_data.is_adviser,
-        }
-        return {"message": "User created successfully"}
+    return form_data
+    # print("--------", form_data.email, form_data.username, form_data.password, form_data.is_adviser)
+    # if form_data.username in fake_users_db:
+    #     raise HTTPException(
+    #         status_code=status.HTTP_400_BAD_REQUEST,
+    #         detail="Username already exists",
+    #         headers={"WWW-Authenticate": "Bearer"},
+    #     )
+    # else:
+    #     fake_users_db[form_data.username] = {
+    #         "id": len(fake_users_db) + 1,
+    #         "username": form_data.username,
+    #         "email": form_data.email,
+    #         "hashed_password": get_password_hash(form_data.password),
+    #         "is_adviser": form_data.is_adviser,
+    #     }
+    #     return {"message": "User created successfully"}
