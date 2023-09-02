@@ -192,12 +192,12 @@ async def register_user(
             headers={"WWW-Authenticate": "Bearer"},
         )
     else:
-        fake_users_db[user.username] = {
+        fake_users_db[form_data.username] = {
             "id": len(fake_users_db) + 1,
-            "username": user.username,
-            "email": user.email,
-            "hashed_password": get_password_hash(user.password),
-            "is_adviser": user.is_adviser,
+            "username": form_data.username,
+            "email": form_data.email,
+            "hashed_password": get_password_hash(form_data.password),
+            "is_adviser": form_data.is_adviser,
         }
         return {"message": "User created successfully"}
 
