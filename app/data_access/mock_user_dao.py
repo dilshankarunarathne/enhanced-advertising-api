@@ -197,6 +197,7 @@ async def register_user(
         )
     hashed_password = fake_hash_password(password)
     user = UserInDB(
+        id=len(fake_users_db) + 1,
         username=username,
         email=email,
         hashed_password=hashed_password,
