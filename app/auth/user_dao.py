@@ -67,12 +67,12 @@ class UserDAO:
         self.cnx.commit()
         cursor.close()
 
-    def get_user_by_id(self, user_id: int) -> UserInDB | None:
+    def get_user_by_username(self, username: str) -> UserInDB | None:
         cursor = self.cnx.cursor()
         query = ("SELECT id, username, email, is_adviser, hashed_password "
                  "FROM users "
-                 "WHERE id = %s")
-        cursor.execute(query, (user_id,))
+                 "WHERE username = %s")
+        cursor.execute(query, (username,))
         row = cursor.fetchone()
         cursor.close()
         if row is None:
