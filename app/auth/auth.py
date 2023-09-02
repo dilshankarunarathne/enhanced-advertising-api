@@ -73,3 +73,10 @@ async def login_for_access_token(
         data={"sub": user.username}, expires_delta=access_token_expires.seconds
     )
     return {"access_token": access_token, "token_type": "bearer"}
+
+
+@router.post("/logout")
+async def logout(token: str = Depends(oauth2_scheme)):
+    # ad the token to the blacklist
+    fake_blacklist.append(token)
+    return {"message": "Successfully logged out"}
