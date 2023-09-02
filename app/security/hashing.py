@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
+
 def decode_token(token):
     pass  # TODO: implement this method
 
