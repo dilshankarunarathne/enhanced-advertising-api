@@ -1,6 +1,8 @@
 from fastapi import APIRouter, Form, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 
+from app.auth.models.user_model import UserInDB
+
 """
     routers for authentication
 """
