@@ -1,3 +1,6 @@
+import mysql.connector
+from mysql.connector import errorcode
+
 from app.auth.models.user_model import User, UserInDB
 
 """
