@@ -37,5 +37,5 @@ async def register_user(
         hashed_password=hashed_password,
         is_adviser=is_adviser,
     )
-    add_new_user()
+    add_new_user(user.model_dump())
     return user
