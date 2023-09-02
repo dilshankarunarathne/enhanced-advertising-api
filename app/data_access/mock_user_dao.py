@@ -119,7 +119,7 @@ def fake_decode_token(token):
 # method should be able to get the token from the request header and check in the db to see if
 # an actual user exists with the username that is encoded in the token. If the user exists,
 # the method should return the user, otherwise it should raise an exception.
-# here, we are mocking the token with just by the username and the db with a dictionary 
+# here, we are mocking the token with just by the username and the db with a dictionary
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
@@ -146,7 +146,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
 # an actual user exists with the username and password that are passed in. If the user exists,
 # the method should return the user, otherwise it should raise an exception.
 @router.post("/token")
-async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
+async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     user_dict = fake_users_db.get(form_data.username)
     if not user_dict:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
