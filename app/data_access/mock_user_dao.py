@@ -86,6 +86,9 @@ def authenticate_user(fake_db, username: str, password: str):
     return user
 
 
+
+
+
 # this method is used to verify the token.
 # method should be able to evaluate a token sent by a client and check in the db to see if
 # an actual user exists with the username that is encoded in the token. If the user exists,
