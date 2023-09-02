@@ -117,12 +117,10 @@ def fake_decode_token(token):
     return user
 
 
-
 # this method is used to blacklist a token. This method will be used by the server to blacklist a token.
 # method should be able to get the token from the request header and add it to the blacklist.
 def is_token_blacklisted(token):
     return token in fake_blacklist
-
 
 
 # this method is used to get the current user.
@@ -136,7 +134,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
         detail="Could not validate credentials",
         headers={"WWW-Authenticate": "Bearer"},
     )
-    if is_token_blacklisted(token): # updated for logout mechanism
+    if is_token_blacklisted(token):  # updated for logout mechanism
         raise credentials_exception
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
@@ -152,7 +150,6 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     return user
 
 
-
 # this method is used to add a token to the blacklist. This method will be used by the server to blacklist a token.
 # method should be able to get the token from the request header and add it to the blacklist.
 @router.post("/logout")
@@ -160,7 +157,6 @@ async def logout(token: str = Depends(oauth2_scheme)):
     # ad the token to the blacklist
     fake_blacklist.append(token)
     return {"message": "Successfully logged out"}
-
 
 
 # tested - working...! :)
@@ -231,4 +227,3 @@ async def register_user(
     )
     fake_users_db[username] = user.model_dump()
     return user
-
