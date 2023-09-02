@@ -18,6 +18,7 @@ def user_exists(username: str) -> bool:
 def get_next_avail_id() -> int:
     last_id = user_dao.get_last_user_id()
     if last_id is None:
+        return 1
 
 
 def get_user(username: str):
