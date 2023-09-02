@@ -3,7 +3,7 @@
 """
 
 
-def 
+def add_new_user
 
 
 def user_exists(username: str) -> bool:
