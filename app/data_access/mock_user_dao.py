@@ -117,6 +117,11 @@ def fake_decode_token(token):
     return user
 
 
+
+
+
+
+
 # this method is used to get the current user.
 # method should be able to get the token from the request header and check in the db to see if
 # an actual user exists with the username that is encoded in the token. If the user exists,
