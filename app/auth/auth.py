@@ -31,6 +31,9 @@ def authenticate_user(username: str, password: str):
     return user
 
 
+
+
+
 @router.post("/register")
 async def register_user(
         username: str = Form(...),
