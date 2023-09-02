@@ -53,7 +53,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://127.0.0.1:8000/mockAuth/to
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
-def 
+def verify_password(plain_password, hashed_password):
 
 
 # this method is used to get a user from the db
