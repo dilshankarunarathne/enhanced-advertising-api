@@ -153,7 +153,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
 
 
 
-# this method is used to get the current active user.
+# this method is used to add a token to the blacklist.
 @router.post("/logout")
 async def logout(token: str = Depends(oauth2_scheme)):
     # ad the token to the blacklist
