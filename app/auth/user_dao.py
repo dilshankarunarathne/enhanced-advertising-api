@@ -1,6 +1,3 @@
-"""
-    middleware for accessing the database and performing CRUD operations on the user table
-"""
 from app.auth.models.user_model import User
 
 
