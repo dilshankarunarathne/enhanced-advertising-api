@@ -21,4 +21,4 @@ def get_next_avail_id() -> int:
 
 
 def get_user(db, username: str):
-    # TODO: i
+    # TODO: implement
