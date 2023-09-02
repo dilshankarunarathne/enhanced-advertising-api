@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.data_access import auth
+from app.auth import auth
 
 app = FastAPI()
 
