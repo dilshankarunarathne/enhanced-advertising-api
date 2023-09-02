@@ -36,8 +36,8 @@ fake_users_db = {
 fake_blacklist = []
 
 
-def fake_hash_password(password: str):
-    return "fake-hashed-" + password
+# def fake_hash_password(password: str):
+#     return "fake-hashed-" + password
 
 
 router = APIRouter(
