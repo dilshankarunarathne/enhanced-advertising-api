@@ -157,7 +157,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
 async def logout(token: str = Depends(oauth2_scheme)):
     # ad the token to the blacklist
     fake_blacklist.append(token)
-    return
+    return {"message": "Successfully logged out"}
 
 
 
