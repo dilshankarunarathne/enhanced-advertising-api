@@ -29,7 +29,7 @@ fake_users_db = {
     },
 }
 
-
+class 
 
 
 def fake_hash_password(password: str):
