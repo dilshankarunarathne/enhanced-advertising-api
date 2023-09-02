@@ -3,4 +3,4 @@
 """
 
 def user_exists(username: str):
-    # TODO
+    # TODO: implement this method
