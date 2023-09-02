@@ -11,8 +11,8 @@ def add_new_user(user: User):
 
 
 def user_exists(username: str) -> bool:
-    # TODO: implement this method
-    pass
+    if get_user(username) is None:
+        return False
 
 
 def get_next_avail_id() -> int:
