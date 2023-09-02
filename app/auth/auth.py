@@ -31,7 +31,7 @@ async def register_user(
         )
     hashed_password = get_password_hash(password)
     user = UserInDB(
-        id=len(fake_users_db) + 1,
+        id= get_next_avail_id(),
         username=username,
         email=email,
         hashed_password=hashed_password,
