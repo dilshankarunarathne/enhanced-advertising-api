@@ -198,4 +198,6 @@ async def register_user(
         password: str = Form(...),
         is_adviser: bool = Form(...),
 ):
+    user = User(username=username, email=email, password=password, is_adviser=is_adviser)
+    return user
 
