@@ -207,25 +207,25 @@ async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
 # method should be able to get the username and password from the request body and check in the db to see if
 # an actual user exists with the username and password that are passed in. If the user exists,
 # the method should return the user, otherwise it should raise an exception.
-@router.post("/register")
-async def register_user(
-        username: str = Form(...),
-        email: str = Form(...),
-        password: str = Form(...),
-        is_adviser: bool = Form(...),
-):
-    if username in fake_users_db:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Username already exists",
-        )
-    hashed_password = get_password_hash(password)
-    user = UserInDB(
-        id=len(fake_users_db) + 1,
-        username=username,
-        email=email,
-        hashed_password=hashed_password,
-        is_adviser=is_adviser,
-    )
-    fake_users_db[username] = user.model_dump()
-    return user
+# @router.post("/register")
+# async def register_user(
+#         username: str = Form(...),
+#         email: str = Form(...),
+#         password: str = Form(...),
+#         is_adviser: bool = Form(...),
+# ):
+#     if username in fake_users_db:
+#         raise HTTPException(
+#             status_code=status.HTTP_400_BAD_REQUEST,
+#             detail="Username already exists",
+#         )
+#     hashed_password = get_password_hash(password)
+#     user = UserInDB(
+#         id=len(fake_users_db) + 1,
+#         username=username,
+#         email=email,
+#         hashed_password=hashed_password,
+#         is_adviser=is_adviser,
+#     )
+#     fake_users_db[username] = user.model_dump()
+#     return user
