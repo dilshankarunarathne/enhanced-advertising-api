@@ -200,7 +200,7 @@ async def register_user(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Username already exists",
         )
-    hashed_password = fake_hash_password(password)
+    hashed_password = 
     user = UserInDB(
         id=len(fake_users_db) + 1,
         username=username,
