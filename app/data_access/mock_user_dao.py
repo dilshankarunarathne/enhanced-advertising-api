@@ -129,7 +129,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
         token_data = TokenData(username=username)
     except JWTError:
         raise credentials_exception
-    user = fake_decode_token(token_data.username)
+    user = get_user()
 
 
 # tested - working...! :)
