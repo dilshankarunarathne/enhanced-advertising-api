@@ -4,4 +4,3 @@ opencv-python~=4.7.0.72
 numpy~=1.24.2
 starlette~=0.27.0
 passlib~=1.7.4
-jose
