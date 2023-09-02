@@ -3,7 +3,7 @@
 """
 
 
-
+def 
 
 
 def user_exists(username: str) -> bool:
