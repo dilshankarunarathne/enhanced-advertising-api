@@ -5,6 +5,7 @@ from passlib.context import CryptContext
 
 """
     middleware for hashing passwords and creating tokens
+    # TODO: Bug: the username & password combo is not being verified correctly
 """
 
 SECRET_KEY = "3ac975a63c346504ccc4bad65505c619a2cc502b01c7a92e3288f4d3b0def92b"
