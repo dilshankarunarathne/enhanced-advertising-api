@@ -31,6 +31,7 @@ fake_users_db = {
 
 class Token(BaseBodel):
     access_token: str
+    
 
 
 def fake_hash_password(password: str):
