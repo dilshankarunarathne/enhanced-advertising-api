@@ -87,6 +87,7 @@ def authenticate_user(fake_db, username: str, password: str):
 
 
 def create_access_token(data: dict, expires_delta: int = None):
+    
 
 
 # this method is used to verify the token.
