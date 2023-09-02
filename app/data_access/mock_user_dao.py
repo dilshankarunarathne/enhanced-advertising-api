@@ -119,7 +119,7 @@ def fake_decode_token(token):
 # method should be able to get the token from the request header and check in the db to see if
 # an actual user exists with the username that is encoded in the token. If the user exists,
 # the method should return the user, otherwise it should raise an exception.
-# here, we are mocking the token with just by the username
+# here, we are mocking the token with just by the username and the db with a dictionary
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
