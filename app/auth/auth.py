@@ -24,7 +24,7 @@ async def register_user(
         password: str = Form(...),
         is_adviser: bool = Form(...),
 ):
-    if :
+    if user_exists():
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Username already exists",
