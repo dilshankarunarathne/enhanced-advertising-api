@@ -36,6 +36,7 @@ class Token(BaseBodel):
 
 
 
+
 def fake_hash_password(password: str):
     return "fake-hashed-" + password
 
