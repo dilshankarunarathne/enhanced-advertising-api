@@ -1,3 +1,5 @@
+from app.auth.dao.user_dao import UserDAO
+
 user_dao = UserDAO(host="localhost", user="root", password="", database="enad")
 user_dao.connect()
 
