@@ -99,9 +99,6 @@ def create_access_token(data: dict, expires_delta: int = None):
     return encoded_jwt
 
 
-async def 
-
-
 # this method is used to verify the token.
 # method should be able to evaluate a token sent by a client and check in the db to see if
 # an actual user exists with the username that is encoded in the token. If the user exists,
