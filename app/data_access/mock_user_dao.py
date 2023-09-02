@@ -182,3 +182,7 @@ async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
 
 @router.post("/register")
 async def register_user(user: User):
+    hashed_password = get_password_hash(user.password)
+    user.hashed_password = hashed_password
+    fake_users_db[user.username] = user
+    return user
