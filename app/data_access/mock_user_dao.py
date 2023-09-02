@@ -192,7 +192,7 @@ class RegistrationForm:
 async def register_user(
         form_data: Annotated[RegistrationForm, Depends()]
 ):
-    print(form_data)
+    print("--------", form_data.email, form_data.username, form_data.password, form_data.is_adviser)
     if form_data.username in fake_users_db:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
