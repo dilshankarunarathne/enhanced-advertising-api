@@ -73,10 +73,10 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 # method should be able to get a user from the db based on the username that is passed in
 # if the user exists, the method should return the user, otherwise it should return None.
 # here, we are mocking the db with a dictionary
-def get_user(db, username: str):
-    if username in db:
-        user_dict = db[username]
-        return UserInDB(**user_dict)
+# def get_user(db, username: str):
+#     if username in db:
+#         user_dict = db[username]
+#         return UserInDB(**user_dict)
 
 
 # this method is used to authenticate a user.
