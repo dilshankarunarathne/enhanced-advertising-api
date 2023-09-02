@@ -1,4 +1,5 @@
 from app.auth.models.user_model import User
+
 """
     middleware for accessing the database and performing CRUD operations on the user table
 """
