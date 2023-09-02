@@ -113,9 +113,9 @@ def create_access_token(data: dict, expires_delta: int = None):
 # an actual user exists with the username that is encoded in the token. If the user exists,
 # the method should return the user, otherwise it should return None.
 # here, we are mocking the token with just by the username
-def fake_decode_token(token):
-    user = get_user(fake_users_db, token)
-    return user
+# def fake_decode_token(token):
+#     user = get_user(fake_users_db, token)
+#     return user
 
 
 # this method is used to blacklist a token. This method will be used by the server to blacklist a token.
