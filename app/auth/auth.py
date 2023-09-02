@@ -37,5 +37,5 @@ async def register_user(
         hashed_password=hashed_password,
         is_adviser=is_adviser,
     )
-    fake_users_db[username] = user.model_dump()
+    fake_users_db[username] = 
     return user
