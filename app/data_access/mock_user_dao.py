@@ -3,7 +3,7 @@ from typing import Annotated
 
 from fastapi import HTTPException, status, Depends, APIRouter
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from jose import jwt
+from jose import jwt, JWTError
 from passlib.context import CryptContext
 
 from app.data_access.model.user_model import UserInDB, User
