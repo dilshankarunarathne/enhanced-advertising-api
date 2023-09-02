@@ -157,6 +157,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
 
 
 
+
 # tested - working...! :)
 # this method is used by the users to acquire a token (login).
 # method should be able to get the username and password from the request body and check in the db to see if
