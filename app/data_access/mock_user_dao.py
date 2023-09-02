@@ -58,6 +58,8 @@ def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
 
+
+
 # this method is used to get a user from the db
 # method should be able to get a user from the db based on the username that is passed in
 # if the user exists, the method should return the user, otherwise it should return None.
