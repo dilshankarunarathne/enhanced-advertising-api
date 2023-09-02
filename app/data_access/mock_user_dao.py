@@ -182,6 +182,10 @@ async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
 #############################################################################################
 
 class RegistrationForm():
+    username: str
+    email: str
+    password: str
+    is_adviser: bool
 
 @router.post("/register")
 async def register_user(
