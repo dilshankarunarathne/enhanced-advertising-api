@@ -193,13 +193,4 @@ class RegistrationForm(BaseModel):
 
 @router.post("/register")
 async def register_user(user: RegistrationForm):
-    hashed_password = get_password_hash(user.password)
-    user = UserInDB(
-        username=user.username,
-        email=user.email,
-        hashed_password=hashed_password,
-        is_adviser=user.is_adviser,
-    )
-    fake_users_db[user.username] = user
-    return {"message": "User registered successfully"}
-
+    
