@@ -8,7 +8,7 @@ from passlib.context import CryptContext
 
 from app.data_access.model.token_model import TokenData
 from app.data_access.model.user_model import UserInDB, User
-from app.security.hashing import verify_password, get_password_hash, create_access_token
+from app.security.hashing import verify_password, get_password_hash, create_access_token, is_token_blacklisted
 
 # to get a string like this run:
 # openssl rand -hex 32
