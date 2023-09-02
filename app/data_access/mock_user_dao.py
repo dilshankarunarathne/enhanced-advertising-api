@@ -96,6 +96,7 @@ def create_access_token(data: dict, expires_delta: int = None):
         expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)  # changes were made here
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    
 
 
 # this method is used to verify the token.
