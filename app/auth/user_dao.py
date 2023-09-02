@@ -4,3 +4,4 @@
 
 def user_exists(username: str):
     # TODO: implement this method
+    pass
