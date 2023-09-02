@@ -20,7 +20,7 @@ def get_next_avail_id() -> int:
     pass
 
 
-def get_user(db, username: str):
+def get_user(username: str):
     # TODO: implement this method
     # check if the user exists in the db and if so, construct and return a UserInDB object
     pass
