@@ -67,7 +67,7 @@ class UserDAO:
         self.cnx.commit()
         cursor.close()
 
-    def get_user_by_id(self, user_id: int) -> UserInDB:
+    def get_user_by_id(self, user_id: int) -> UserInDB | None:
         cursor = self.cnx.cursor()
         query = ("SELECT id, username, email, is_adviser, hashed_password "
                  "FROM users "
