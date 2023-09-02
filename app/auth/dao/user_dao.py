@@ -60,7 +60,7 @@ class UserDAO:
 
     def get_last_user_id(self) -> int:
         cursor = self.cnx.cursor()
-        query = ("SELECT MAX(id) FROM users")
+        query = "SELECT MAX(id) FROM users"
         cursor.execute(query)
         row = cursor.fetchone()
         cursor.close()
