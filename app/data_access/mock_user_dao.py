@@ -29,7 +29,8 @@ fake_users_db = {
     },
 }
 
-class Token(BaseBodel)
+class Token(BaseBodel):
+    
 
 
 def fake_hash_password(password: str):
