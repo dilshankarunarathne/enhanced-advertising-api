@@ -183,9 +183,9 @@ async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
 
 @router.post("/register")
 async def register_user(
-        user: User
+        form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
 ):
-    if user.username in fake_users_db:
+    if form_data.username in fake_users_db:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Username already exists",
