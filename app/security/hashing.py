@@ -28,5 +28,6 @@ def create_access_token(data: dict, expires_delta: int = None):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
+
 def is_token_blacklisted(token):
     return token in fake_blacklist
