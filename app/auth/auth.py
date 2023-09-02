@@ -6,7 +6,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
 from app.auth.models.user_model import UserInDB
 from app.auth.user_dao import user_exists, get_next_avail_id, add_new_user, get_user
-from app.security.hashing import get_password_hash, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES
+from app.security.hashing import get_password_hash, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, verify_password
 
 """
     routers for authentication
