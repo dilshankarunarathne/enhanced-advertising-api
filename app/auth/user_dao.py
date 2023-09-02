@@ -24,3 +24,5 @@ def get_user(username: str):
     # TODO: implement this method
     # check if the user exists in the db and if so, construct and return a UserInDB object
     pass
+
+
