@@ -53,7 +53,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://127.0.0.1:8000/mockAuth/to
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
-# this method is used to hash the password.
+# this method is used to verify that the password that is passed in matches the hashed password that is passed in.
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
