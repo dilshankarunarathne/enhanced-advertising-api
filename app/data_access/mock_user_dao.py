@@ -119,6 +119,7 @@ def fake_decode_token(token):
 
 
 # this method is used to blacklist a token. This method will be used by the server to blacklist a token.
+# method should be able to get the token from the request header and add it to the blacklist.
 def is_token_blacklisted(token):
     return token in fake_blacklist
 
