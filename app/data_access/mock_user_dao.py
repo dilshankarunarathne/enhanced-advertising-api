@@ -117,6 +117,7 @@ def fake_decode_token(token):
 
 # this method is used to get the current user.
 # method should be able to get the token from the request header and check in the db to see if
+
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
