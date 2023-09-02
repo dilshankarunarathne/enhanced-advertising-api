@@ -53,6 +53,8 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="http://127.0.0.1:8000/mockAuth/to
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
+
+
 # this method is used to get a user from the db
 # method should be able to get a user from the db based on the username that is passed in
 # if the user exists, the method should return the user, otherwise it should return None.
