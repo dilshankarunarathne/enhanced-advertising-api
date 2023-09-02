@@ -6,6 +6,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
 from passlib.context import CryptContext
 
+from app.data_access.model.token_dao import TokenData
 from app.data_access.model.user_model import UserInDB, User
 
 # to get a string like this run:
