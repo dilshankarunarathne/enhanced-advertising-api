@@ -3,6 +3,6 @@
 """
 
 
-def user_exists(username: str):
+def user_exists(username: str) -> bool:
     # TODO: implement this method
     pass
