@@ -187,6 +187,7 @@ class RegistrationForm():
     password: str
     is_adviser: bool
 
+
 @router.post("/register")
 async def register_user(
         form_data: Annotated[OAuth2PasswordRequestForm, Depends()]
@@ -206,5 +207,3 @@ async def register_user(
             "is_adviser": form_data.is_adviser,
         }
         return {"message": "User created successfully"}
-
-
