@@ -154,7 +154,8 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
 
 
 @router.post("/logout")
-async def logout(token: str = Depends(oauth2_scheme))
+async def logout(token: str = Depends(oauth2_scheme)):
+    
 
 
 
