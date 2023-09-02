@@ -181,7 +181,7 @@ async def auth_root(current_user: Annotated[User, Depends(get_current_user)]):
 
 #############################################################################################
 
-class RegistrationForm:
+class RegistrationForm(BaseModel):
     username: str
     email: str
     password: str
