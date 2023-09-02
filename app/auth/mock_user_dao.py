@@ -35,7 +35,7 @@ fake_users_db = {
     },
 }
 
-fake_blacklist = []
+# fake_blacklist = []
 
 
 # def fake_hash_password(password: str):
