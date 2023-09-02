@@ -5,3 +5,5 @@ numpy~=1.24.2
 starlette~=0.27.0
 passlib~=1.7.4
 python-jose[cryptography]~=3.3.0
+mysql~=0.0.3
+mysql-connector-python~=8.0.33
