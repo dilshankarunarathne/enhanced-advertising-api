@@ -58,7 +58,7 @@ def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
 
-# 
+# this method is used to hash the password that is passed in.
 def get_password_hash(password):
     return pwd_context.hash(password)
 
