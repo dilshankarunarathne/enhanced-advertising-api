@@ -131,7 +131,7 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
         raise credentials_exception
     user = get_user(fake_users_db, username=token_data.username)
     if user is None:
-        
+        raise credentials_exception
 
 
 # tested - working...! :)
