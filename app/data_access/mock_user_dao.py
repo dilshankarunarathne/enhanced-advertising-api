@@ -35,7 +35,7 @@ class Token(BaseBodel):
 
 
 class TokenData(BaseModel):
-    username: str
+    username: str | None = None
 
 
 def fake_hash_password(password: str):
