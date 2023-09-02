@@ -73,7 +73,7 @@ def get_user(db, username: str):
         return UserInDB(**user_dict)
 
 
-
+# this method is used to authenticate a user.
 def authenticate_user(fake_db, username: str, password: str):
     user = get_user(fake_db, username)
     if not user:
