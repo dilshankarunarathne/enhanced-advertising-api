@@ -8,4 +8,4 @@ def user_exists(username: str) -> bool:
     pass
 
 
-def 
+def get_next_avail_id
