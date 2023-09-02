@@ -88,6 +88,7 @@ def authenticate_user(fake_db, username: str, password: str):
     return user
 
 
+# this method is used to create a token.
 def create_access_token(data: dict, expires_delta: int = None):
     to_encode = data.copy()
     if expires_delta:
