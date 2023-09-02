@@ -193,5 +193,6 @@ class RegistrationForm(BaseModel):
 
 @router.post("/register")
 async def register_user(
-        username: str = Form(...), ):
+        username: str = Form(...),
+):
 
