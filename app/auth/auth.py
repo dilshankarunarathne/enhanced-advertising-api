@@ -2,7 +2,7 @@ from fastapi import APIRouter, Form, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 
 from app.auth.models.user_model import UserInDB
-from app.auth.user_dao import user_exists
+from app.auth.user_dao import user_exists, get_next_avail_id
 from app.security.hashing import get_password_hash
 
 """
