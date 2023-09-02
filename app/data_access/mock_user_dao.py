@@ -190,5 +190,18 @@ async def register_user(
         password: str = Form(...),
         is_adviser: bool = Form(...),
 ):
-
+    if username in fake_users_db:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Username already exists",
+        )
+    hashed_password = fake_hash_password(password)
+    user = UserInDB(
+        username=username,
+        email=email,
+        hashed_password=hashed_password,
+        is_adviser=is_adviser,
+    )
+    fake_users_db[username] = user.dict()
+    return user
 
