@@ -1,6 +1,8 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 from fastapi.security import OAuth2PasswordBearer
 
+from app.auth.auth import oauth2_scheme
+
 router = APIRouter(
     prefix="/api/image",
     tags=["image"],
