@@ -8,6 +8,14 @@ from app.auth.models.token_model import TokenData
 from app.auth.services.user_service import get_user
 from app.security.hashing import is_token_blacklisted, SECRET_KEY, ALGORITHM
 
+def authenticate_user(username: str, password: str):
+    user = get_user(username)
+    if not user:
+        return False
+    if not verify_password(password, user.hashed_password):
+        return False
+    return user
+
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     credentials_exception = HTTPException(
