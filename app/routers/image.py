@@ -6,4 +6,5 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-@router.post("/image")
+@router.post("/")
+
