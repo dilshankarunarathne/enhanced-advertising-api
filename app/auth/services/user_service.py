@@ -1,4 +1,4 @@
-from app.auth.dao.enad_dao import UserDAO
+
 from app.auth.models.user_model import User
 
 
