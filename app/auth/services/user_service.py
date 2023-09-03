@@ -1,4 +1,3 @@
-
 from app.auth.models.user_model import User
 
 
