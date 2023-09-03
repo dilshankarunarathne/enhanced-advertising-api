@@ -32,6 +32,7 @@ provides the following functionalities:
 - starlette
 - passlib
 - mysql
+- mysql-connector-python
 - python-jose[cryptography]
 
 ## Contributing
