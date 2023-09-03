@@ -6,7 +6,7 @@ from jose import jwt, JWTError
 from app.auth.auth import oauth2_scheme
 from app.auth.models.token_model import TokenData
 from app.auth.services.user_service import get_user
-from app.security.hashing import is_token_blacklisted, SECRET_KEY, ALGORITHM
+from app.security.hashing import is_token_blacklisted, SECRET_KEY, ALGORITHM, verify_password
 
 
 def authenticate_user(username: str, password: str):
