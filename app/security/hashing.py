@@ -34,7 +34,6 @@ def create_access_token(data: dict, expires_delta: int = None):
 
 
 def blacklist_token(token):
-    blacklisted_on = datetime.utcnow()
     # TODO: store the token in the blacklist
     pass
 
