@@ -23,7 +23,7 @@ async def evaluate_image(
 
     contents = await image.read()
 
-    # TODO:
+    # TODO: send image to model for evaluation
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
 
