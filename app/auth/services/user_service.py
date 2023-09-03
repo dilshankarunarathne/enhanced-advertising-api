@@ -2,7 +2,8 @@ from app.auth.dao.user_dao import UserDAO
 from app.auth.models.user_model import User
 
 user_dao = UserDAO(host="localhost", user="root", password="", database="enad")
-user_dao.connect()
+try:
+    user_dao.connect()
 
 
 def add_new_user(user: User):
