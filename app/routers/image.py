@@ -18,3 +18,4 @@ async def evaluate_image(
     contents = await image.read()
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
+    
