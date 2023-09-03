@@ -17,7 +17,7 @@ async def evaluate_image(
     if image.content_type != "image/jpeg":
         return "Only jpeg images are supported"
 
-    if get_current_user(token) is
+    if get_current_user(token) is None:
     contents = await image.read()
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
