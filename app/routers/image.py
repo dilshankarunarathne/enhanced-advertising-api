@@ -7,4 +7,4 @@ router = APIRouter(
 )
 
 @router.post("/")
-async def 
+async def evaluate_image(image: UploadFile = File(...)):
