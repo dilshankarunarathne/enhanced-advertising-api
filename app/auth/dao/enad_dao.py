@@ -67,3 +67,5 @@ class EnAdDAO:
         if row is None:
             return 0
         return row[0]
+    
+    
