@@ -29,7 +29,7 @@ provides the following functionalities:
 - fastapi
 - uvicorn
 - pydantic
-- 
+- starlette
 
 ## Contributing
 
