@@ -9,6 +9,8 @@ from app.auth.services.user_service import get_user
 from app.security.hashing import is_token_blacklisted, SECRET_KEY, ALGORITHM, verify_password
 
 
+
+
 def authenticate_user(username: str, password: str):
     user = get_user(username)
     if not user:
