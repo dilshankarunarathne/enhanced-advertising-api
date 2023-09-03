@@ -1,4 +1,5 @@
 from app.auth.models.user_model import User
+from app.auth.services.database_service import dao
 
 
 def add_new_user(user: User):
