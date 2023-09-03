@@ -16,3 +16,4 @@ async def evaluate_image(
         token: str = Depends(oauth2_scheme)
 ):
     contents = await image.read()
+    
