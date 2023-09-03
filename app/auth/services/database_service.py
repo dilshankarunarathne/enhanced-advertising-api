@@ -1,4 +1,4 @@
-dao = UserDAO(host="localhost", user="root", password="", database="enad")
+dao = DAO(host="localhost", user="root", password="", database="enad")
 try:
     user_dao.connect()
 except Exception as e:
