@@ -1,6 +1,7 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 
 from app.auth.auth import oauth2_scheme
+from app.security.authorize import get_current_user
 
 router = APIRouter(
     prefix="/api/image",
@@ -19,7 +20,7 @@ async def evaluate_image(
 
     if get_current_user(token) is None:
         return "Invalid token"
-    
+
     contents = await image.read()
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
