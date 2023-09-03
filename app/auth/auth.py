@@ -4,14 +4,10 @@ from typing import Annotated
 from fastapi import APIRouter, Form, HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
-from jose import jwt, JWTError
-
-from app.auth.models.token_model import TokenData
 from app.auth.models.user_model import UserInDB
-from app.auth.services.user_service import get_user, user_exists, get_next_avail_id, add_new_user
+from app.auth.services.user_service import user_exists, get_next_avail_id, add_new_user
 from app.security.authorize import authenticate_user
-from app.security.hashing import get_password_hash, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, verify_password, \
-    blacklist_token, is_token_blacklisted, SECRET_KEY, ALGORITHM
+from app.security.hashing import get_password_hash, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, blacklist_token
 
 """
     routers for authentication
