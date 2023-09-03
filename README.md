@@ -28,6 +28,7 @@ provides the following functionalities:
 - pip 20.0 or higher
 - fastapi
 - uvicorn
+- pydantic
 
 ## Contributing
 
