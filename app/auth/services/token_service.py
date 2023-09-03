@@ -1,3 +1,6 @@
+from app.auth.services.database_service import dao
+
+
 def add_token_to_blacklist(token: str):
     dao.
 
