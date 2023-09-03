@@ -2,6 +2,8 @@ from typing import Annotated
 
 from fastapi import Depends
 
+from app.auth.auth import oauth2_scheme
+
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     credentials_exception = HTTPException(
