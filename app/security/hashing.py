@@ -34,7 +34,7 @@ def create_access_token(data: dict, expires_delta: int = None):
 
 
 def blacklist_token(token):
-    add_token_to_blacklist
+    add_token_to_blacklist()
 
 
 def is_token_blacklisted(token):
