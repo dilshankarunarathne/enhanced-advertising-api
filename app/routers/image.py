@@ -22,7 +22,8 @@ async def evaluate_image(
         raise credentials_exception
 
     contents = await image.read()
-    
+
+    #
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
 
