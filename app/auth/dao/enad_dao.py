@@ -8,7 +8,7 @@ from app.auth.models.user_model import User, UserInDB
 """
 
 
-class UserDAO:
+class EnAdDAO:
     def __init__(self, host, user, password, database):
         self.host = host
         self.user = user
