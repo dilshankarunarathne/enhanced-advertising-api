@@ -19,6 +19,7 @@ async def evaluate_image(
 
     if get_current_user(token) is None:
         return "Invalid token"
+    
     contents = await image.read()
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
