@@ -25,4 +25,4 @@ async def evaluate_image(
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
 
-    return "Image received"
+    return "Image received" # TODO
