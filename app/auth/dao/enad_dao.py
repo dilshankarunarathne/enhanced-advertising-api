@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import mysql.connector
 from mysql.connector import errorcode
 
@@ -8,7 +10,7 @@ from app.auth.models.user_model import User, UserInDB
 """
 
 
-class UserDAO:
+class EnAdDAO:
     def __init__(self, host, user, password, database):
         self.host = host
         self.user = user
@@ -67,3 +69,34 @@ class UserDAO:
         if row is None:
             return 0
         return row[0]
+    
+    def blacklist_token(self, token: str):
+        """
+        Add a token to the blacklist table with the current timestamp
+        """
+        try:
+            cursor = self.cnx.cursor()
+            query = "INSERT INTO blacklist (token, blacklisted_on) VALUES (%s, %s)"
+            timestamp = datetime.now()
+            values = (token, timestamp)
+            cursor.execute(query, values)
+            self.cnx.commit()
+            cursor.close()
+        except mysql.connector.Error as err:
+            print(err)
+
+    def is_token_blacklisted(self, token: str) -> bool:
+        """
+        Check if a token exists in the blacklist table
+        """
+        try:
+            cursor = self.cnx.cursor()
+            query = "SELECT COUNT(*) FROM blacklist WHERE token = %s"
+            values = (token,)
+            cursor.execute(query, values)
+            result = cursor.fetchone()[0]
+            cursor.close()
+            return result > 0
+        except mysql.connector.Error as err:
+            print(err)
+            return False

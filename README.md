@@ -26,6 +26,14 @@ provides the following functionalities:
 
 - Python 3.8 or higher
 - pip 20.0 or higher
+- fastapi
+- uvicorn
+- pydantic
+- starlette
+- passlib
+- mysql
+- mysql-connector-python
+- python-jose[cryptography]
 
 ## Contributing
 

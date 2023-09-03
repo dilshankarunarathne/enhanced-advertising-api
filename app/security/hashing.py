@@ -3,6 +3,8 @@ from datetime import datetime, timedelta
 from jose import jwt
 from passlib.context import CryptContext
 
+from app.auth.services.token_service import add_token_to_blacklist, check_if_token_is_blacklisted
+
 """
     middleware for hashing passwords and creating tokens
 """
@@ -34,11 +36,8 @@ def create_access_token(data: dict, expires_delta: int = None):
 
 
 def blacklist_token(token):
-    blacklisted_on = datetime.utcnow()
-    # TODO: store the token in the blacklist
-    pass
+    add_token_to_blacklist(token)
 
 
 def is_token_blacklisted(token):
-    # TODO: implement this method
-    return False
+    return check_if_token_is_blacklisted(token)
