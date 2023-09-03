@@ -1,8 +1,6 @@
 from app.auth.models.user_model import User
 
 
-
-
 def add_new_user(user: User):
     user_dao.create_user(user)
 
