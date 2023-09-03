@@ -30,7 +30,7 @@ provides the following functionalities:
 - uvicorn
 - pydantic
 - starlette
-- 
+- passlib
 
 ## Contributing
 
