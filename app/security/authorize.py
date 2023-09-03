@@ -1,7 +1,7 @@
 from typing import Annotated
 
 from fastapi import Depends, HTTPException, status
-from jose import jwt
+from jose import jwt, JWTError
 
 from app.auth.auth import oauth2_scheme
 from app.auth.models.token_model import TokenData
