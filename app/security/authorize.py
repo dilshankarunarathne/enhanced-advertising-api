@@ -3,6 +3,7 @@ from typing import Annotated
 from fastapi import Depends, HTTPException, status
 
 from app.auth.auth import oauth2_scheme
+from app.security.hashing import is_token_blacklisted
 
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
