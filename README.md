@@ -27,6 +27,7 @@ provides the following functionalities:
 - Python 3.8 or higher
 - pip 20.0 or higher
 - fastapi
+- uvicorn
 
 ## Contributing
 
