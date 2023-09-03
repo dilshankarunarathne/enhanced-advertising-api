@@ -17,7 +17,7 @@ from app.security.hashing import get_password_hash, create_access_token, ACCESS_
 """
 
 router = APIRouter(
-    prefix="/auth",
+    prefix="/api/auth",
     tags=["auth"],
     responses={404: {"description": "Not found"}},
 )
