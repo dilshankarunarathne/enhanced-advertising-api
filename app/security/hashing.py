@@ -38,5 +38,4 @@ def blacklist_token(token):
 
 
 def is_token_blacklisted(token):
-    # TODO: implement this method
-    return False
+    
