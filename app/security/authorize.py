@@ -19,11 +19,6 @@ def authenticate_user(username: str, password: str):
 
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
-    credentials_exception = HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Could not validate credentials",
-        headers={"WWW-Authenticate": "Bearer"},
-    )
     if is_token_blacklisted(token):
         raise credentials_exception
     try:
