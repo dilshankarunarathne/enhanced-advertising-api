@@ -38,4 +38,4 @@ def blacklist_token(token):
 
 
 def is_token_blacklisted(token):
-    return check_if_token_is_blacklisted
+    return check_if_token_is_blacklisted(token)
