@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from app.auth import auth
+from app.routers import image
 
 app = FastAPI()
 
