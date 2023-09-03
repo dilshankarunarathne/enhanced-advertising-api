@@ -4,7 +4,7 @@ from app.auth.auth import oauth2_scheme
 from app.security.authorize import get_current_user, credentials_exception
 
 """
-    
+    routers for image evaluation
 """
 
 router = APIRouter(
