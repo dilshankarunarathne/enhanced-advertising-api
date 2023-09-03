@@ -15,6 +15,7 @@ async def evaluate_image(
         token: str = Depends(oauth2_scheme)
 ):
     if image.content_type != "image/jpeg":
+        return "Only jpeg images are supported"
     contents = await image.read()
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
