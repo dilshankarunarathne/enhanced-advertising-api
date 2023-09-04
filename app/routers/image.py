@@ -30,6 +30,6 @@ async def evaluate_image(
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
 
-    
+    age = 
 
     return "Image received"  # TODO: return results
