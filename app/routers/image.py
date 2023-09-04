@@ -31,5 +31,6 @@ async def evaluate_image(
         f.write(contents)
 
     age = 23  # TODO: get age from model
+    
 
     return "Image received"  # TODO: return results
