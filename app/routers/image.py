@@ -30,6 +30,6 @@ async def evaluate_image(
     with open("D:/image.jpg", "wb") as f:
         f.write(contents)
 
-    age = 23 #
+    age = 23 # TODO: get age from model
 
     return "Image received"  # TODO: return results
