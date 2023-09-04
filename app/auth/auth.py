@@ -6,7 +6,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 
 from app.auth.models.user_model import UserInDB
 from app.auth.services.user_service import user_exists, get_next_avail_id, add_new_user
-from app.security.authorize import authenticate_user
+from app.security.authorize import authenticate_user, oauth2_scheme
 from app.security.hashing import get_password_hash, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES, blacklist_token
 
 """
