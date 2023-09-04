@@ -1,6 +1,5 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 
-from app.auth.auth import oauth2_scheme
 from app.security.authorize import get_current_user, credentials_exception
 
 """
