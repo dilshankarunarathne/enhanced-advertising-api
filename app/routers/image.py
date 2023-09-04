@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 
-from app.security.authorize import get_current_user, credentials_exception
+from app.security.authorize import get_current_user, credentials_exception, oauth2_scheme
 
 """
     routers for image evaluation
